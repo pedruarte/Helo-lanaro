@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para o amor da minha vida ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(to bottom, #ffe6e6, #fff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      overflow: hidden;
+      position: relative;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .recado {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 600px;
+      z-index: 1;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .recado h1 {
+      color: #d10068;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .recado p {
+      color: #333;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .recado strong {
+      display: block;
+      margin-top: 20px;
+      font-size: 1.5rem;
+      color: #d10068;
+    }
+
+    .heart {
+      position: absolute;
+      color: #ff4d6d;
+      font-size: 1.5rem;
+      animation: fall 8s linear infinite;
+      user-select: none;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-100vh) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="recado">
+    <h1>Para o amor da minha vida ❤️</h1>
+    <p>
+      Desde a primeira noite, meus pensamentos se tornaram sua morada. É lá que você vive,
+      iluminando tudo dentro de mim, do bom dia linda ao nosso ritual de boa noite, TODOS OS DIAS.
+      Quanto mais te tenho, mais te amo, e, a cada dia que passa, mais certeza tenho de que é ao seu lado
+      que quero viver minha vida. Nosso amor é único, cheio de carinho, respeito e verdade.
+      Que essa conexão seja eterna enquanto estivermos neste mundo e, mesmo depois,
+      que nossas almas ainda se reconheçam.
+    </p>
+    <strong>EU TE AMO</strong>
+  </div>
+
+  <script>
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.textContent = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = Math.random() * 20 + 10 + "px";
+      heart.style.animationDuration = Math.random() * 5 + 5 + "s";
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 10000);
+    }
+
+    setInterval(createHeart, 200);
+  </script>
+</body>
+</html>
